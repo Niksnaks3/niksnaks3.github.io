@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niksnaks - 777-Foodstore IT-support</title>
+    <title>Niksnaks - Test site!</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,16 +20,13 @@
                 <div class="logo-group">
                     <div class="logo-niksnaks">
                         <div class="logo-icon">
-                            <img src="https://media.discordapp.net/attachments/1466616950334558470/1466617208980639764/niksnaksLOGO8.png?ex=69869fb7&is=69854e37&hm=222a786b2e06c5808ee4740e3a71837219fb0343064695a34d306378393e0251&=&format=webp&quality=lossless&width=843&height=760"
-                                alt="Niksnaks Logo" class="logo-img">
+                            <img src="logo.png" alt="Niksnaks Logo" class="logo-img">
                         </div>
                     </div>
+
+                    <!-- 777 LOGO REPLACED WITH IMAGE -->
                     <div class="logo-777">
-                        <div class="circle-777">
-                            <span class="seven">7</span>
-                            <span class="seven">7</span>
-                            <span class="seven">7</span>
-                        </div>
+                        <img src="777logo.png" alt="777 Logo" class="logo-777-img">
                     </div>
                 </div>
             </div>
@@ -52,8 +49,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-background">
-            <img src="https://media.discordapp.net/attachments/1466616950334558470/1468842666581168303/Screenshot_2026-02-05_044250.png?ex=6986cf55&is=69857dd5&hm=815fae23cfd41ec4d3fe3b70e69059ff93132beb1c517e26881c5b1d5e79e85c&=&format=webp&quality=lossless&width=1032&height=517"
-                alt="Snowy scene" class="hero-img" />
+            <img src="banner.png" alt="Banner" class="hero-img" />
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
@@ -109,8 +105,8 @@
                     <p>&copy; 2026 Niksnaks. Alle rechten voorbehouden.</p>
                 </div>
                 <div class="footer-right">
-                    <a href="#" class="footer-link">Privacy</a>
-                    <a href="#" class="footer-link">Contact</a>
+                    <!-- Updated contact link -->
+                    <a href="mailto:niksnaks3@outlook.com" class="footer-link">Contact</a>
                 </div>
             </div>
         </div>
