@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -64,7 +63,7 @@
             <h3 class="section-title">Video</h3>
             <div class="video-container">
                 <video controls class="video-player">
-                    <source src="Russianstrangerthingsedit.mp4" type="video/mp4">
+                    <source src="video.mp4" type="video/mp4">
                     Je browser ondersteunt geen video tag.
                 </video>
             </div>
@@ -115,5 +114,6 @@
 
     <script src="script.js"></script>
 </body>
+
 
 </html>
