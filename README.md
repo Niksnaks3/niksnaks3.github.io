@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niksnaks - Test site!</title>
+    <title>Niksnaks - 777-Foodstore IT-support</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,7 +86,7 @@
                     <div class="repo-icon">💻</div>
                     <h4>IT Support</h4>
                     <p>Technische documentatie en support tickets</p>
-                    <a href="#" class="repo-link">Bekijk support →</a>
+                    <a href="https://777-foodstore.com/password" class="repo-link" target="_blank">Bekijk support →</a>
                 </div>
                 <div class="repo-card">
                     <div class="repo-icon">🎮</div>
