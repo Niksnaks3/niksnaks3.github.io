@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niksnaks - 777-Foodstore IT-support</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        
+         :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #f4a261;
+            --light-color: #f1faee;
+            --dark-color: #101820;
+            --font-heading: 'Russo One', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        /* Header Styles */
+        
+        .header {
+            background-color: var(--dark-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .logo-niksnaks {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-img {
+            height: 70px;
+            width: auto;
+            transition: var(--transition);
+        }
+        
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+        
+        .logo-777 img {
+            height: 70px;
+            width: auto;
+            transition: var(--transition);
+        }
+        
+        .logo-777 img:hover {
+            transform: rotate(10deg);
+        }
+        
+        .header-center {
+            text-align: center;
+        }
+        
+        .main-title {
+            font-family: 'Black Ops One', cursive;
+            font-size: 2.5rem;
+            color: var(--light-color);
+            letter-spacing: 2px;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            color: var(--accent-color);
+            margin-top: -5px;
+            font-weight: 500;
+        }
+        
+        .header-right {
+            display: flex;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 25px;
+        }
+        
+        .nav-link {
+            color: var(--light-color);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent-color);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover:after,
+        .nav-link.active:after {
+            width: 100%;
+        }
+        /* Hero Section */
+        
+        .hero {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.8);
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient( to right, rgba(16, 24, 32, 0.8), rgba(16, 24, 32, 0.4));
+        }
+        
+        .hero-content {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .hero-text {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        
+        .hero-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            margin-top: 20px;
+        }
+        
+        .hero-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* Video Section */
+        
+        .video-section {
+            padding: 5rem 0;
+            background-color: #fff;
+        }
+        
+        .video-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .video-player {
+            width: 100%;
+            display: block;
+            max-height: 450px;
+        }
+        /* Repository Section */
+        
+        .repository-section {
+            padding: 5rem 0;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        .repository-section .section-title {
+            color: white;
+        }
+        
+        .repository-section .section-title:after {
+            background: var(--accent-color);
+        }
+        
+        .repo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 3rem;
+        }
+        
+        .repo-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+        
+        .repo-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .repo-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .repo-card h4 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+        
+        .repo-card p {
+            margin-bottom: 20px;
+        }
+        
+        .repo-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid var(--accent-color);
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        
+        .repo-link:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+        /* Footer */
+        
+        .footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .footer-left p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-right {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-link:hover {
+            color: var(--accent-color);
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .logo-group {
+                justify-content: center;
+            }
+            .nav {
+                gap: 15px;
+            }
+            .hero-text {
+                font-size: 2rem;
+            }
+            .repo-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Left Logos -->
+            <div class="header-left">
+                <div class="logo-group">
+                    <div class="logo-niksnaks">
+                        <div class="logo-icon">
+                            <!-- LOGO IMAGE -->
+                            <div style="width: 150px; height: 100px; background-color: #1d3557; display: flex; justify-content: center; align-items: center; border-radius: 10px; margin-right: 20px;">
+                                <span style="color: white; font-weight: bold;">logo.png</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="logo-777">
+                        <!-- 777 LOGO IMAGE -->
+                        <div style="width: 100px; height: 100px; background-color: #e63946; display: flex; justify-content: center; align-items: center; border-radius: 50%;">
+                            <span style="color: white; font-weight: bold;">777logo.png</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Title -->
+            <div class="header-center">
+                <h1 class="main-title">Niksnaks</h1>
+                <p class="subtitle">777-Foodstore IT-support</p>
+            </div>
+
+            <!-- Right Navigation -->
+            <div class="header-right">
+                <nav class="nav">
+                    <a href="#" class="nav-link active">Home</a>
+                    <a href="#" class="nav-link">Portfolio</a>
+                    <a href="#" class="nav-link">Diensten</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <!-- HERO IMAGE -->
+            <div style="width: 100%; height: 100%; background-color: #f4a261; display: flex; justify-content: center; align-items: center;">
+                <span style="color: white; font-size: 2rem; font-weight: bold;">banner.png</span>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h2 class="hero-text">Repository onderaan de site!</h2>
+            <p>Een verzameling van onze IT-projecten en expertise</p>
+            <a href="#repository" class="hero-btn">Bekijk Repository</a>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <h3 class="section-title">Video</h3>
+            <div class="video-container">
+                <!-- VIDEO PLACEHOLDER -->
+                <div style="width: 100%; height: 400px; background-color: #333; display: flex; justify-content: center; align-items: center;">
+                    <div style="text-align: center; color: white;">
+                        <i class="fas fa-play-circle" style="font-size: 5rem; margin-bottom: 20px;"></i>
+                        <p>Russianstrangerthingsedit.mp4</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repository Section -->
+    <section class="repository-section" id="repository">
+        <div class="container">
+            <h3 class="section-title">Repository</h3>
+            <div class="repo-grid">
+                <div class="repo-card">
+                    <div class="repo-icon">📁</div>
+                    <h4>Project Files</h4>
+                    <p>Browse alle project bestanden en documentatie</p>
+                    <a href="https://github.com/Niksnaks3/Niksnaks-Projecten" class="repo-link" target="_blank">Bekijk bestanden →</a>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-icon">💻</div>
+                    <h4>IT Support</h4>
+                    <p>Technische documentatie en support tickets</p>
+                    <a href="#" class="repo-link">Bekijk support →</a>
+                </div>
+                <div class="repo-card">
+                    <div class="repo-icon">🎮</div>
+                    <h4>Discord</h4>
+                    <p>Prima plek om te praten met ubernerds. 👍🏻</p>
+                    <a href="https://discord.gg/ty95axGZNj" class="repo-link" target="_blank">Join discord! →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 Niksnaks. Alle rechten voorbehouden.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="#" class="footer-link">Privacy</a>
+                    <a href="#" class="footer-link">Contact</a>
+                    <a href="#" class="footer-link">Over ons</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation for repository cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            const cards = document.querySelectorAll('.repo-card');
+            cards.forEach(card => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+
+</html>
