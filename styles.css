@@ -85,6 +85,14 @@ body {
     border-radius: 8px;
 }
 
+.logo-777-img {
+    width: 100%;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
 .logo-777 {
     display: flex;
     align-items: center;
